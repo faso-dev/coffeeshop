@@ -66,3 +66,10 @@ Also take not that a post verb to create resource doesn't return a list of resou
 You can find the code in the `src/app/services/drinks.service.ts` file on the method `addDrink`.
 
 
+### Resources
+
+[Ionic CLI](https://ionicframework.com/docs/cli)
+[Angular 7 Docs](https://v7.angular.io/docs)
+[Flask Generic Exception Handler](https://flask.palletsprojects.com/en/2.1.x/errorhandling/#generic-exception-handlers)
+
+
