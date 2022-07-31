@@ -70,7 +70,7 @@ def create_drink(payload):
 
     return jsonify({
         'success': True,
-        'drink': drink.long()
+        'drinks': [drink.long()]
     })
 
 
