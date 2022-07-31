@@ -47,7 +47,7 @@ def get_token_auth_header():
         raise AuthError({
             'code': 'authorization_header_missing',
             'description': 'Authorization header is expected.'
-        }, 400)
+        }, 401)
 
     # split the header into a list
     headers_parts = auth_header.split(' ')
@@ -94,14 +94,14 @@ def check_permissions(permission, payload):
         raise AuthError({
             'code': 'invalid_claims',
             'description': 'Permissions not included in JWT.'
-        }, 400)
+        }, 401)
 
-    # here, we're not allowed to perform this action, so the correct error code is 401
+    # here, we're not allowed to perform this action, so the correct error code is 403
     if permission not in payload['permissions']:
         raise AuthError({
             'code': 'unauthorized',
             'description': 'Permission not found.'
-        }, 401)
+        }, 403)
     return True
 
 
