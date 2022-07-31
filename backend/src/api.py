@@ -9,6 +9,9 @@ from .utils.validator import validate, partial_validate
 from .utils.validator_response import json_abort_422
 
 app = Flask(__name__)
+# app.config['AUTH0_DOMAIN'] = 'dev-0mmekwpe.us.auth0.com'
+# app.config['ALGORITHMS'] = ['RS256']
+# app.config['API_AUDIENCE'] = 'coffees'
 setup_db(app)
 CORS(app)
 
