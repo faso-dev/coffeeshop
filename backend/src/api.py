@@ -124,7 +124,7 @@ def update_drink(payload, drink_id):
 
     return jsonify({
         'success': True,
-        'drink': drink_long.long()
+        'drinks': [drink_long.long()]
     })
 
 
